@@ -60,7 +60,7 @@ app.post("/register", async (request, response) => {
             );`;
 
       await db.run(createUserQuery);
-      response.send("User Created Successfully");
+      response.send("User created successfully");
     } else {
       response.status(400);
       response.send("Password is too short");
@@ -137,7 +137,6 @@ app.put("/change-password", async (request, response) => {
         await db.run(updateQuery);
         response.send("Password updated");
       }
-      response.send("Login success!");
     } else {
       response.status(400);
       response.send("Invalid current password");
